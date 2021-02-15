@@ -22,7 +22,7 @@ async def get_post_photo(message: types.Message, state: FSMContext):
             await bot.send_photo(chat_id=message.chat.id, photo=photo, caption=answer, parse_mode='Markdown',
                                  disable_notification=True)
             await message.answer('Вот ссылка для получения поста:'
-                                 '\nhttps://t.me/asino777_bot?start={}\n\nАктивируйте, '
+                                 '\nhttps://t.me/apkxalvabot?start={}\n\nАктивируйте, '
                                  'чтобы проверить'.format(arg), disable_web_page_preview=True,
                                  disable_notification=True)
             await db.write_post(text=str(answer), random_text='{}'.format(arg), photo=photo)
@@ -46,7 +46,7 @@ async def get_post(message: types.Message, state: FSMContext):
             photo = ''
             await message.answer(text, parse_mode='Markdown', disable_web_page_preview=True, disable_notification=True)
             await message.answer('Вот ссылка для получения поста:'
-                                 '\nhttps://t.me/asino777_bot?start={}\n\nАктивируйте, '
+                                 '\nhttps://t.me/apkxalvabot?start={}\n\nАктивируйте, '
                                  'чтобы проверить'.format(arg), disable_web_page_preview=True,
                                  disable_notification=True)
             await db.write_post(text=str(text), random_text='{}'.format(arg), photo=photo)
@@ -104,7 +104,7 @@ async def get_key_post(message: types.Message, state: FSMContext):
     try:
         await message.answer(edit_text, parse_mode='Markdown', disable_web_page_preview=True, disable_notification=True)
         await message.answer('Пост изменен\n\nАктивируйте бота по ссылке для проверки:'
-                             '\nhttps://t.me/asino777_bot?start={}'.format(arg), disable_web_page_preview=True,
+                             '\nhttps://t.me/apkxalvabot?start={}'.format(arg), disable_web_page_preview=True,
                              disable_notification=True)
         await db.update_post(edit_text, arg, photo)
         await message.answer('Сообщение подготовлено', reply_markup=key_after_create_post)
@@ -124,7 +124,7 @@ async def get_key_post(message: types.Message, state: FSMContext):
         await bot.send_photo(chat_id=message.chat.id, photo=photo, caption=answer, parse_mode='Markdown',
                              disable_notification=True)
         await message.answer('Пост изменен\n\nАктивируйте бота по ссылке для проверки:'
-                             '\nhttps://t.me/asino777_bot?start={}'.format(arg), disable_web_page_preview=True,
+                             '\nhttps://t.me/apkxalvabot?start={}'.format(arg), disable_web_page_preview=True,
                              disable_notification=True)
         await db.update_post(answer, arg, photo)
         await message.answer('Сообщение подготовлено', reply_markup=key_after_create_post)
@@ -147,7 +147,7 @@ async def get_key_del(message: types.Message, state: FSMContext):
     if await db.check_link(arg):
         await db.ban_post(arg)
         await message.answer('Пост заблокирован\n\nАктивируйте бота по ссылке для проверки:'
-                             '\nhttps://t.me/f_trade_bot?start={}'.format(arg))
+                             '\nhttps://t.me/apkxalvabot?start={}'.format(arg))
         await message.answer('Сообщение подготовлено', reply_markup=key_after_create_post)
         await state.finish()
     else:
