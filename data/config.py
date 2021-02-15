@@ -4,13 +4,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-BOT_TOKEN = str(os.getenv("1175808577:AAFNV-VvxbBsVkqfPFIKV5tEGkE7-lawDng"))
-admins = [814806045, 571939968]
+BOT_TOKEN = str(os.getenv("BOT_TOKEN"))
+admins = [466263117, 571939968]
 PGUSER = os.getenv("PGUSER")
 PGPASSWORD = os.getenv("PGPASSWORD")
 channel = os.getenv("channel")
 # ip = "192.168.99.100"
-ip = "localhost"
+ip = "172.31.20.170"
 # 172.31.35.235
 additional_channel = ''
 channel_link = ''
