@@ -96,7 +96,7 @@ async def start_mess_deeplink(message: types.Message):
                     ans = f'Для того чтобы получить курс вы должны быть ' \
                           f'подписаны на [{name}]({config.channel_link})\n\n' \
                           f'Подпишитесь на канал и активируйте бот по ссылке:\n' \
-                          f'https://t.me/halvadbot\\_bot?start={arg}'
+                          f'https://t.me/apkxalvabot\\_bot?start={arg}'
                     await message.answer(ans, parse_mode='Markdown')
             except Exception as e:
                 await db.increment_link(arg=arg)
@@ -235,9 +235,9 @@ async def start_mess_deeplink(message: types.Message):
 async def start_mess_deeplink_m(message: types.Message):
     await r.write_user(message.chat.id)
     arg = message.get_args()
-    await message.answer('Вы должны быть подписаны на канал @halvaexpress\n\n'
+    await message.answer('Вы должны быть подписаны на канал https://t.me/joinchat/AAAAAEXiHrMBos4MiA8UOg\n\n'
                          'Подпишитесь на канал и запустите бота по ссылке:\n'
-                         'https://t.me/halvadbot?start={}'.format(arg))
+                         'https://t.me/apkxalvabot?start={}'.format(arg))
 
 
 @rate_limit(limit=1)
@@ -246,7 +246,7 @@ async def start_mess_deeplink_m(message: types.Message):
     await r.write_user(message.chat.id)
     arg = message.get_args()
     await message.answer('Ошибка в ссылке:\n'
-                         'https://t.me/halvadbot?start={}\n\nОбратитесь к администратору @pashcock'.format(arg))
+                         'https://t.me/apkxalvabot?start={}\n\nОбратитесь к администратору @bondiwest'.format(arg))
 
 
 @rate_limit(limit=1)
@@ -254,9 +254,9 @@ async def start_mess_deeplink_m(message: types.Message):
 async def start_mess_deeplink_m(message: types.Message):
     await r.write_user(message.chat.id)
     arg = message.get_args()
-    await message.answer('<b>Вы должны быть подписаны на канал</b> @halvaexpress\n\n'
+    await message.answer('<b>Вы должны быть подписаны на канал</b> https://t.me/joinchat/AAAAAEXiHrMBos4MiA8UOg\n\n'
                          'Подпишитесь на канал и запустите бота по ссылке:\n'
-                         'https://t.me/halvadbot?start={}'.format(arg))
+                         'https://t.me/apkxalvabot?start={}'.format(arg))
 
 
 @rate_limit(limit=1)
@@ -264,7 +264,7 @@ async def start_mess_deeplink_m(message: types.Message):
 async def all_start_mess(message: types.Message):
     await r.write_user(message.chat.id)
     await message.answer('<b>Здравствуйте!</b>\n\nВ этом боте вы можете получить ссылку'
-                         'с канала @halvaexpress\nВопросы /help'.format(message.from_user.full_name))
+                         'с канала https://t.me/joinchat/AAAAAEXiHrMBos4MiA8UOg\nВопросы /help'.format(message.from_user.full_name))
 
 
 @rate_limit(limit=1)
